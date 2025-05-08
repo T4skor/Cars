@@ -1,0 +1,250 @@
+/* Variables de color */
+:root {
+  --color-fondo: #ffffff;
+  --color-texto: #000000;
+  --color-primario: #ff0000;
+  --color-dorado: #FFD700;
+}
+
+body.dark-mode {
+  --color-fondo: #121212;
+  --color-texto: #ffffff;
+  --color-primario: #ff5722;
+  --color-dorado: #FFD700;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hero Section */
+.hero {
+  background: url('img/coche1.jpg') no-repeat center center/cover;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 5rem 2rem;
+  text-align: left;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 800px;
+  margin-left: 2rem;
+  padding: 1rem;
+}
+
+.hero-text {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.hero-buttons .btn {
+  background-color: transparent;
+  color: white;
+  padding: 1rem 2rem;
+  border: 2px solid white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+  box-shadow: none;
+}
+
+.hero-buttons .btn:hover {
+  background-color: white;
+  color: var(--color-primario);
+  border: 2px solid var(--color-primario);
+}
+
+/* Estilo dorado para la palabra 'nuevo' */
+.nuevo {
+  color: var(--color-dorado);
+}
+
+/* Servicios */
+.seccion {
+  padding: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+}
+
+/* Galería */
+.galeria .slider {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.galeria .slider-images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.galeria .slider-images img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: fade 15s infinite;
+  border-radius: 8px;
+  transition: opacity 1s ease-in-out;
+}
+
+.galeria .slider-images img:nth-child(1) {
+  animation-delay: 0s;
+}
+.galeria .slider-images img:nth-child(2) {
+  animation-delay: 5s;
+}
+.galeria .slider-images img:nth-child(3) {
+  animation-delay: 10s;
+}
+
+@keyframes fade {
+  0%, 100% { opacity: 0; }
+  10%, 30% { opacity: 1; }
+  40%, 90% { opacity: 0; }
+}
+
+/* Instagram */
+#instagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.instagram-btn {
+  background-color: transparent;
+  color: white;
+  padding: 1rem 2rem;
+  border: 2px solid white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+  box-shadow: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.instagram-btn i {
+  font-size: 1.5rem;
+}
+
+.instagram-btn:hover {
+  background-color: white;
+  color: var(--color-primario);
+  border: 2px solid var(--color-primario);
+}
+
+/* Modo oscuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #fff;
+}
+
+body.dark-mode header {
+  background-color: #333;
+}
+
+body.dark-mode .card {
+  background-color: #333;
+  color: white;
+}
+
+body.dark-mode .btn {
+  border: 2px solid white;
+  color: white;
+}
+
+body.dark-mode .btn:hover {
+  background-color: white;
+  color: var(--color-primario);
+  border: 2px solid var(--color-primario);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    height: auto;
+    padding: 3rem 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}

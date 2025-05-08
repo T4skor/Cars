@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garage Elite Detailing</title>
+  <link rel="stylesheet" href="/css/estilos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body class="dark-mode">
+  <header class="hero" style="background: url('img/coche1.jpg') no-repeat center center/cover; height: 100vh;">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Tu coche, como <span class="nuevo">nuevo</span></h1>
+        <p>Especialistas en detallado, pulido y personalización de vehículos</p>
+      </div>
+      <div class="hero-buttons">
+        <a href="#galeria" class="btn">Galería</a>
+        <a href="#contacto" class="btn">Contáctanos</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="servicios" class="seccion">
+    <h2>Servicios</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Lavado Premium</h3>
+        <p>Lavado a mano, limpieza de llantas y encerado profesional.</p>
+      </div>
+      <div class="card">
+        <h3>Detailing Interior</h3>
+        <p>Limpieza profunda de asientos, alfombras y tapicerías.</p>
+      </div>
+      <div class="card">
+        <h3>Corrección de pintura</h3>
+        <p>Eliminación de rayones y restauración del brillo original.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria" class="seccion galeria">
+    <h2>Galería</h2>
+    <div class="slider">
+      <div class="slider-images">
+        <img src="img/coche1.jpg" alt="Coche detailing 1" />
+        <img src="img/coche2.jpg" alt="Coche detailing 2" />
+        <img src="img/coche3.jpg" alt="Coche detailing 3" />
+      </div>
+    </div>
+  </section>
+
+  <section id="instagram" class="seccion">
+    <h2>Síguenos en Instagram</h2>
+    <a href="https://www.instagram.com/izxngt/" target="_blank" class="btn instagram-btn">
+      <i class="fab fa-instagram"></i> Síguenos
+    </a>
+  </section>
+  
+
+  <footer>
+    <p>&copy; 2025 Garage Elite Detailing</p>
+  </footer>
+
+  <script>
+    // Modo oscuro toggle (si tienes un botón con id "modo-toggle")
+    const btn = document.getElementById("modo-toggle");
+    if (btn) {
+      btn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        btn.textContent = document.body.classList.contains("dark-mode")
+          ? "🌙 Modo Claro"
+          : "🌑 Modo Oscuro";
+      });
+    }
+
+    // Galería fade automático
+    document.addEventListener("DOMContentLoaded", () => {
+      const images = document.querySelectorAll('.slider-images img');
+      let current = 0;
+      const total = images.length;
+
+      function showNextImage() {
+        images[current].classList.remove('active');
+        current = (current + 1) % total;
+        images[current].classList.add('active');
+      }
+
+      images[current].classList.add('active');
+      setInterval(showNextImage, 5000);
+    });
+  </script>
+</body>
+</html>
