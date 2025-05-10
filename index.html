@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Garage Elite Detailing</title>
-  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="stylesheet" href="/css/estilos.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body class="dark-mode">
   <header class="hero" style="background: url('img/coche1.jpg') no-repeat center center/cover; height: 100vh;">
@@ -16,8 +16,8 @@
         <p>Especialistas en detallado, pulido y personalización de vehículos</p>
       </div>
       <div class="hero-buttons">
-        <a href="#galeria" class="btn">Galería</a>
-        <a href="#contacto" class="btn">Contáctanos</a>
+        <a href="galeria.html" class="btn">Galería</a>
+        <a href="contacto.html" class="btn">Contáctanos</a>
       </div>
     </div>
   </header>
@@ -57,25 +57,12 @@
       <i class="fab fa-instagram"></i> Síguenos
     </a>
   </section>
-  
 
   <footer>
     <p>&copy; 2025 Garage Elite Detailing</p>
   </footer>
 
   <script>
-    // Modo oscuro toggle (si tienes un botón con id "modo-toggle")
-    const btn = document.getElementById("modo-toggle");
-    if (btn) {
-      btn.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-        btn.textContent = document.body.classList.contains("dark-mode")
-          ? "🌙 Modo Claro"
-          : "🌑 Modo Oscuro";
-      });
-    }
-
-    // Galería fade automático
     document.addEventListener("DOMContentLoaded", () => {
       const images = document.querySelectorAll('.slider-images img');
       let current = 0;
