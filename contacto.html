@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto</title>
+  <style>
+    /* Variables de color */
+    :root {
+      --color-fondo: #2b2d31;          /* Tipo Discord */
+      --color-texto: #ffffff;          /* Blanco */
+      --color-primario: #9146ff;       /* Morado tipo Twitch */
+      --color-acento: #b794f4;         /* Morado claro/acento */
+    }
+
+    /* Modo oscuro personalizado */
+    body.dark-mode {
+      --color-fondo: #2b2d31;
+      --color-texto: #ffffff;
+      --color-primario: #b266ff;
+      --color-acento: #d9b3ff;
+    }
+
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--color-fondo);
+      color: var(--color-texto);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Estilo general para el header */
+    header {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--color-primario);
+      color: white;
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    header a {
+      text-decoration: none;
+      color: white;
+      margin: 0 1rem;
+      font-size: 1.2rem;
+    }
+
+    /* Sección principal */
+    main {
+      padding: 2rem;
+    }
+
+    /* Sección de contacto */
+    #instagram {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 2rem; /* Espacio entre los botones */
+      margin-top: 1rem;
+    }
+
+    .instagram-btn {
+      background-color: transparent;
+      color: var(--color-primario);
+      padding: 1rem 2rem;
+      border: 2px solid var(--color-primario);
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: all 0.3s;
+    }
+
+    .instagram-btn:hover {
+      background-color: var(--color-primario);
+      color: white;
+    }
+
+    /* Estilo para el footer */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--color-primario);
+      color: white;
+      margin-top: auto;
+    }
+
+    /* Modo oscuro específico */
+    body.dark-mode .instagram-btn {
+      border: 2px solid var(--color-primario);
+      color: var(--color-primario);
+    }
+
+    body.dark-mode .instagram-btn:hover {
+      background-color: var(--color-primario);
+      color: black;
+    }
+  </style>
+</head>
+<body class="light-mode">
+  <header>
+    <h1>Contacto</h1>
+    <div>
+      <a href="index.html">🏠 Inicio</a>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>¡Ponte en contacto con nosotros!</h2>
+      <div id="instagram">
+        <a href="https://www.instagram.com/detailingxcars/" class="instagram-btn" target="_blank">Síguenos en Instagram</a>
+        <a href="mailto:detailingxcars@gmail.com" class="instagram-btn">detailingxcars@gmail.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Garage Deportivo</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
